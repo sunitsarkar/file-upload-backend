@@ -7,7 +7,7 @@ const router=require('./router');
 const mongoose = require('mongoose');
 
 
-
+//db connetion
 const password=process.env.PASSWORD;
 const url=`mongodb+srv://sunitsarkar:${password}@cluster0.gxschpx.mongodb.net/?retryWrites=true&w=majority`
 
