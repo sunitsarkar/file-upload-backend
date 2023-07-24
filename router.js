@@ -80,29 +80,11 @@ const verifyToken=(req,res,next)=>{
         else{
             res.send('invalid token')
         }
-//   const bearerHeader=req.headers["authorization"]
-//   if(bearerHeader){
-//     const bearer=bearerHeader.split(' ');
-//     const token=bearer[1];
-//     req.token=token;
-//     next();
-//   }
-//   else{
-//     res.send('invalid token')
-//   }
 }
 
 router.get('/files',async (req,res)=>{
     const allData=await file.find();
     res.send(allData)
-
-    // jwt.verify(req.token,secretKey,(err,authData)=>{
-    //     if(err){
-    //        return res.send('invalid token')
-    //     }else{
-    //         res.send(allData)
-    //     }
-    // });
 });
 
 router.delete('/delet',(req,res)=>{
